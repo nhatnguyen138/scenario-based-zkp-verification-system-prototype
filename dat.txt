@@ -1,0 +1,15 @@
+fname	James
+lname	Nguyen
+year	1998
+month	08
+date	13
+ID	138600992
+TFN	665402965
+phone	0416851646
+email	jnguyen@gmail.com
+pcode	2000
+state   NSW
+city	Sydney
+street	Fake
+number	123
+unit	17
