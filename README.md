@@ -24,13 +24,13 @@ Go to the <b>depends</b> folder and get a Git submodule of the Libsnark library 
 $ cd depends
 $ git submodule add https://github.com/scipr-lab/libsnark.git libsnark
 ```
-(<u>Note</u>: if the git package is not running, type in: ```Linux git init```)
+(<b>Note</b>: if the git package is not running, type in: ```Linux git init```)
 
 Fetch all the dependencies from the Libsnark Github repository:
 ``` Linux
 $ git submodule update --init --recursive
 ```
-(<u>Note</u>: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
+(<b>Note</b>: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
 
 Make a build directory, compile and run the prototype:
 ``` Linux
