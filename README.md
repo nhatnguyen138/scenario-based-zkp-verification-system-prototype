@@ -11,9 +11,26 @@ The difference between this new system among others is that: although they all u
 The prototype consists of 3 types of SNARK verification: age verification (check if the prover meets the age requirement), address verification (check if the prover's house has a service covered by the service provider), and phone number verification (check prover's identity, assuming a phone number is only owned by one person). However, it is worth noting that the prototype is not complete: in the address verification, to truly prove that the address is covered by the service provider, that service provider has to store the list of hashb-based signatures from multiple addresses and whenever it verifies it must check the if the signature is match to the database. By not having a pseudo-database to test this, it is marked as incomplete.
 
 ### 2. Build Instructions
+
+The following is the prototype's build instructions on Linux OS. According to SCIPR Lab annotation in the Libsnark library [[1]](https://github.com/scipr-lab/libsnark), due to some limitation in the library's portability, it is recommended to run the implementation within the setups that they have already tested so far. The prototype is implemented on 'Ubuntu 16.04 LTS'. After downloading the source code of the system prototype, do the following:
+
+Installing the requisite packages - Ubuntu 16.04 LTS:
 ``` Linux
 $ sudo apt-get install build-essential cmake git libgmp3-dev python-markdown libboost-all-dev libssl-dev
 ```
+
+Go to the <b>depends</b> folder and get a Git submodule of the Libsnark library in the folder 'libsnark':
+``` Linux
+$ cd depends
+$ git submodule add https://github.com/scipr-lab/libsnark.git libsnark
+```
+(Note: if the git package is not running, type in: ```Linux git init```)
+
+Fetch all the dependencies from the Libsnark Github repository:
+``` Linux
+$ git submodule update --init --recursive
+```
+(Note: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
 
 ### 3. Conclusion
 Something else here
