@@ -30,7 +30,7 @@ Fetch all the dependencies from the Libsnark Github repository:
 ``` Linux
 $ git submodule update --init --recursive
 ```
-(<b>Note</b>: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
+(<b>Note</b>: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur) 
 
 Make a build directory, compile and run the prototype:
 ``` Linux
