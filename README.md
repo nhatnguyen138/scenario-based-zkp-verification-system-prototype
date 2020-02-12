@@ -24,13 +24,24 @@ Go to the <b>depends</b> folder and get a Git submodule of the Libsnark library 
 $ cd depends
 $ git submodule add https://github.com/scipr-lab/libsnark.git libsnark
 ```
-(Note: if the git package is not running, type in: ```Linux git init```)
+(<u>Note</u>: if the git package is not running, type in: ```Linux git init```)
 
 Fetch all the dependencies from the Libsnark Github repository:
 ``` Linux
 $ git submodule update --init --recursive
 ```
-(Note: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
+(<u>Note</u>: it is recommended that the system is updated before updating the submodule; otherwise, some errors will occur). 
+
+Make a build directory, compile and run the prototype:
+``` Linux
+$ cd ..
+$ mkdir build && cd build && cmake ..
+$ make
+$ ./src/main
+```
+
+When running the prototype, you will be asked to choose the type of SNARK verification, either age, address or phone number verification. All the processes will be run within the prototype; however, in real-life scenario there will be at least 3 entitities: generator (generates public and private keys for verification), prover (creates proof from the keys and the information), verifier (uses the proof as well as the public credentials to verify the user's proof).
 
 ### 3. Conclusion
-Something else here
+
+In short, the prototype allows the provers to choose only the required information for the verification, protects th0em from unnecessary information disclosure. Although the prototype design has not been fully developed as well as it is fairly simple, it uses the concepts as well as the technologies needed for the future work and development (ie. SHA256 compression function and hash-based signatures).
