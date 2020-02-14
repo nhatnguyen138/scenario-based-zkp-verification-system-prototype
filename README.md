@@ -46,4 +46,4 @@ When running the prototype, you will be asked to choose the type of SNARK verifi
 
 In short, the prototype allows the provers to choose only the required information for the verification, protects th0em from unnecessary information disclosure. Although the prototype design has not been fully developed as well as it is fairly simple, it uses the concepts as well as the technologies needed for the future work and development (ie. SHA256 compression function and hash-based signatures).
 
-Copyrighted&copy; by CSIRO Data61
+<b>Copyrighted&copy; by CSIRO Data61</b>
